@@ -262,25 +262,36 @@ class Triangulator:
                 zorder=11)
 
             self.ax.figure.canvas.draw()
-            match vertex_type:
-                case "start":
+            if vertex_type == "start":
+                self.handle_start_vertex(vertex)
+            elif vertex_type == "end":
+                self.handle_end_vertex(vertex)
+            elif vertex_type == "split":
+                self.handle_split_vertex(vertex)
+            elif vertex_type == "merge":
+                self.handle_merge_vertex(vertex)
+            elif vertex_type == "regular":
+                self.handle_regular_vertex(vertex)
+            else:
+                print("unknown vert type")
+            # match vertex_type:
+            #     case "start":
+            #         self.handle_start_vertex(vertex)
+            #     case "end":
 
-                    self.handle_start_vertex(vertex)
-                case "end":
+            #         self.handle_end_vertex(vertex)
 
-                    self.handle_end_vertex(vertex)
+            #     case "split":
 
-                case "split":
+            #         self.handle_split_vertex(vertex)
+            #     case "merge":
 
-                    self.handle_split_vertex(vertex)
-                case "merge":
+            #         self.handle_merge_vertex(vertex)
+            #     case "regular":
 
-                    self.handle_merge_vertex(vertex)
-                case "regular":
-
-                    self.handle_regular_vertex(vertex)
-                case _:
-                    print("unknown vert type")
+            #         self.handle_regular_vertex(vertex)
+            #     case _:
+            #         print("unknown vert type")
             self.ax.figure.canvas.draw()
             if self.slow_mode:
                 plt.pause(self.delay)
