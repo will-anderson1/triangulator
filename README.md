@@ -1,8 +1,5 @@
 ### Requirements
-- matplotlib
-  - ```pip install matplotlib```
+- python >= 3.9
 
 ### Triangulating a polygon
-- ```python3 main.py```
-- draw a <strong>SIMPLE</strong> polygon
-- click "Triangulate" 
+- ```make run```

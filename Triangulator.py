@@ -1,6 +1,7 @@
 import time
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle
+
 class Triangulator:
     def __init__(self, dcel, plt, ax, slow_mode):
         self.dcel = dcel
