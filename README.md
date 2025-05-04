@@ -3,8 +3,8 @@
 
 ### Triangulating a polygon
 ## Windows
-  - execute run.bat
+  - navigate to the folder you installed this project in and execute run.bat
 
 ## Mac/Linux (or windows if you have Make)
-  - make run
+  - in a terminal - ```make run```
 
